@@ -1,0 +1,26 @@
+{
+  "author": "Bharat Middha <bmiddha99@gmail.com>",
+  "name": "ts-rcon",
+  "description": "Rcon client implemented in Node.js with TypeScript",
+  "version": "1.1.2",
+  "homepage": "https://github.com/bmiddha/ts-rcon",
+  "repository": "git://github.com/bmiddha/ts-rcon",
+  "main": "dist/node-rcon.js",
+  "types": "./dist/node-rcon.d.ts",
+  "files": [
+    "dist/node-rcon.js",
+    "dist/node-rcon.d.ts"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p .",
+    "watch": "tsc -w -p .",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.3"
+  }
+}
