@@ -1,6 +1,7 @@
 # ts-rcon
 
 [![npm](https://img.shields.io/npm/v/ts-rcon)](https://www.npmjs.com/package/ts-rcon)
+[![Build Status](https://bmiddha.visualstudio.com/LinuxKnight/_apis/build/status/bmiddha.ts-rcon?branchName=master)](https://bmiddha.visualstudio.com/LinuxKnight/_build/latest?definitionId=4&branchName=master)
 
 ts-rcon is a simple library for connecting to RCON servers in node.js implemented in TypeScript.
 Based on [pushrax/node-rcon](https://github.com/pushrax/node-rcon).
