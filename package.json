@@ -12,9 +12,9 @@
     "dist/node-rcon.d.ts"
   ],
   "scripts": {
-    "prepublishOnly": "tsc",
-    "build": "tsc",
-    "watch": "tsc -w",
+    "prepublishOnly": "npm run build",
+    "build": "node_modules/typescript/bin/tsc",
+    "watch": "npm run build -w",
     "clean": "rimraf dist"
   },
   "dependencies": {},
