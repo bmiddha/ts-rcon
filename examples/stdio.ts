@@ -1,6 +1,6 @@
-const Rcon = require('../dist/node-rcon');
+import Rcon from '../dist';
 
-var conn = new Rcon('localhost', 1234, 'password');
+const conn = new Rcon('localhost', 1234, 'password');
 conn.on('auth', function () {
     console.log('Authed!');
 })
@@ -18,7 +18,7 @@ require('keypress')(process.stdin);
 process.stdin.setRawMode(true);
 process.stdin.resume();
 
-var buffer = '';
+let buffer = '';
 
 process.stdin.on('keypress', function (chunk, key) {
     if (key && key.ctrl && (key.name == 'c' || key.name == 'd')) {

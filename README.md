@@ -1,7 +1,7 @@
 # ts-rcon
 
 [![npm](https://img.shields.io/npm/v/ts-rcon)](https://www.npmjs.com/package/ts-rcon)
-[![Build Status](https://bmiddha.visualstudio.com/Packages/_apis/build/status/bmiddha.ts-rcon%20-%20CI?branchName=master)](https://bmiddha.visualstudio.com/Packages/_build/latest?definitionId=5&branchName=master)
+[![Node CI](https://github.com/bmiddha/ts-rcon/workflows/Node%20CI/badge.svg)](https://github.com/bmiddha/ts-rcon/actions?query=workflow%3A%22Node+CI%22)
 
 ts-rcon is a simple library for connecting to RCON servers in node.js implemented in TypeScript.
 Based on [pushrax/node-rcon](https://github.com/pushrax/node-rcon).
@@ -18,7 +18,7 @@ $ npm install ts-rcon
 ```
 ## Usage
 
-See [`examples/stdio.js`](https://github.com/pushrax/node-rcon/blob/master/examples/stdio.js) for a simple example.
+See [`examples/stdio.js`](examples/stdio.js) for a simple example.
 
 Some games use TCP and some use UDP for their RCON implementation. To tell
 node-rcon which protocol to use, pass it an options object like so:
