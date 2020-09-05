@@ -1,16 +1,17 @@
 import Rcon from '..';
 
 const conn = new Rcon('localhost', 1234, 'password');
-conn.on('auth', function () {
+conn
+  .on('auth', function () {
     console.log('Authed!');
-})
-    .on('response', function (str) {
-        console.log('Got response: ' + str);
-    })
-    .on('end', function () {
-        console.log('Socket closed!');
-        process.exit();
-    });
+  })
+  .on('response', function (str) {
+    console.log('Got response: ' + str);
+  })
+  .on('end', function () {
+    console.log('Socket closed!');
+    process.exit();
+  });
 
 conn.connect();
 
@@ -21,19 +22,19 @@ process.stdin.resume();
 let buffer = '';
 
 process.stdin.on('keypress', function (chunk, key) {
-    if (key && key.ctrl && (key.name == 'c' || key.name == 'd')) {
-        conn.disconnect();
-        return;
-    }
-    process.stdout.write(chunk);
-    if (key && (key.name == 'enter' || key.name == 'return')) {
-        conn.send(buffer);
-        buffer = '';
-        process.stdout.write('\n');
-    } else if (key && key.name == 'backspace') {
-        buffer = buffer.slice(0, -1);
-        process.stdout.write('\033[K'); // Clear to end of line
-    } else {
-        buffer += chunk;
-    }
+  if (key && key.ctrl && (key.name == 'c' || key.name == 'd')) {
+    conn.disconnect();
+    return;
+  }
+  process.stdout.write(chunk);
+  if (key && (key.name == 'enter' || key.name == 'return')) {
+    conn.send(buffer);
+    buffer = '';
+    process.stdout.write('\n');
+  } else if (key && key.name == 'backspace') {
+    buffer = buffer.slice(0, -1);
+    process.stdout.write('\033[K'); // Clear to end of line
+  } else {
+    buffer += chunk;
+  }
 });
