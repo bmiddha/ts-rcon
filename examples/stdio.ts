@@ -1,4 +1,4 @@
-import Rcon from '../dist';
+import Rcon from '..';
 
 const conn = new Rcon('localhost', 1234, 'password');
 conn.on('auth', function () {

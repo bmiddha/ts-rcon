@@ -1,7 +1,6 @@
 # ts-rcon
 
-[![npm](https://img.shields.io/npm/v/ts-rcon)](https://www.npmjs.com/package/ts-rcon)
-[![Node CI](https://github.com/bmiddha/ts-rcon/workflows/Node%20CI/badge.svg)](https://github.com/bmiddha/ts-rcon/actions?query=workflow%3A%22Node+CI%22)
+[![npm](https://img.shields.io/npm/v/ts-rcon)](https://www.npmjs.com/package/ts-rcon) [![Node CI](https://github.com/bmiddha/ts-rcon/workflows/Node%20CI/badge.svg)](https://github.com/bmiddha/ts-rcon/actions?query=workflow%3A%22Node+CI%22)
 
 ts-rcon is a simple library for connecting to RCON servers in node.js implemented in TypeScript.
 Based on [pushrax/node-rcon](https://github.com/pushrax/node-rcon).
@@ -10,15 +9,18 @@ as well as many other game servers.
 
 It was originally created to connect to Minecraft's RCON server.
 
+[RCON Protocol Docs](https://developer.valvesoftware.com/wiki/Source_RCON_Protocol)
+
 ## Installation
 
-npm:
 ```shell
-$ npm install ts-rcon
+npm install ts-rcon
+yarn add ts-rcon
 ```
+
 ## Usage
 
-See [`examples/stdio.js`](examples/stdio.js) for a simple example.
+See [`examples/`](examples/) for examples.
 
 Some games use TCP and some use UDP for their RCON implementation. To tell
 node-rcon which protocol to use, pass it an options object like so:
@@ -47,4 +49,3 @@ If there's a game you know uses a certain protocol, feel free to submit a pull
 request.
 
 Please submit a bug report for any game you try that doesn't work!
-

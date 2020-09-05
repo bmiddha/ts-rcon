@@ -220,5 +220,3 @@ export class Rcon extends events.EventEmitter {
         this.hasAuthed = false;
     };
 }
-
-export default Rcon;

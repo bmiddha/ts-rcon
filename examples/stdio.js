@@ -1,6 +1,6 @@
-const Rcon = require('../dist/node-rcon');
+const Rcon = require('..');
 
-var conn = new Rcon('localhost', 1234, 'password');
+var conn = new Rcon('localhost', 25575, 'minecraft');
 conn.on('auth', function () {
     console.log('Authed!');
 })
