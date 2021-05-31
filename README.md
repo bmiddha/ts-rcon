@@ -20,8 +20,6 @@ yarn add ts-rcon
 
 ## Usage
 
-See [`examples/`](examples/) for examples.
-
 Some games use TCP and some use UDP for their RCON implementation. To tell
 node-rcon which protocol to use, pass it an options object like so:
 
