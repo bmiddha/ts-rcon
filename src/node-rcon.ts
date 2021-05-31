@@ -132,10 +132,14 @@ export class Rcon extends events.EventEmitter {
 
   private _udpSocketOnData = (data: Buffer) => {
     const a = data.readUInt32LE(0);
-    if (a == 0xffffffff) {
+    if (a === 0xffffffff) {
       const str = data.toString('utf-8', 4);
       const tokens = str.split(' ');
-      if (tokens.length == 3 && tokens[0] == 'challenge' && tokens[1] == 'rcon') {
+      if (
+        tokens.length === 3 &&
+        tokens[0] === 'challenge' &&
+        tokens[1] === 'rcon'
+      ) {
         this._challengeToken = tokens[2].substr(0, tokens[2].length - 1).trim();
         this.hasAuthed = true;
         this.emit('auth');
@@ -149,7 +153,10 @@ export class Rcon extends events.EventEmitter {
 
   private _tcpSocketOnData = (data: Buffer) => {
     if (this.outstandingData != null) {
-      data = Buffer.concat([this.outstandingData, data], this.outstandingData.length + data.length);
+      data = Buffer.concat(
+        [this.outstandingData, data],
+        this.outstandingData.length + data.length
+      );
       this.outstandingData = null;
     }
 
@@ -161,11 +168,11 @@ export class Rcon extends events.EventEmitter {
       const type = data.readInt32LE(8);
 
       if (len >= 10 && data.length >= len + 4) {
-        if (id == this.rconId) {
-          if (!this.hasAuthed && type == PacketType.RESPONSE_AUTH) {
+        if (id === this.rconId) {
+          if (!this.hasAuthed && type === PacketType.RESPONSE_AUTH) {
             this.hasAuthed = true;
             this.emit('auth');
-          } else if (type == PacketType.RESPONSE_VALUE) {
+          } else if (type === PacketType.RESPONSE_VALUE) {
             // Read just the body of the packet (truncate the last null byte)
             // See https://developer.valvesoftware.com/wiki/Source_RCON_Protocol for details
             let str = data.toString('utf8', 12, 12 + len - 10);
