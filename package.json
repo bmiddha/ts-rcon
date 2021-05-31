@@ -1,6 +1,6 @@
 {
   "name": "ts-rcon",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Rcon client implemented in Node.js with TypeScript",
   "license": "MIT",
   "author": "Bharat Middha <5100938+bmiddha@users.noreply.github.com>",
