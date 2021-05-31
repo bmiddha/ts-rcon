@@ -1,6 +1,6 @@
 # ts-rcon
 
-[![npm](https://img.shields.io/npm/v/ts-rcon)](https://www.npmjs.com/package/ts-rcon) [![Node CI](https://github.com/bmiddha/ts-rcon/workflows/Node%20CI/badge.svg)](https://github.com/bmiddha/ts-rcon/actions?query=workflow%3A%22Node+CI%22)
+[![npm](https://img.shields.io/npm/v/ts-rcon)](https://www.npmjs.com/package/ts-rcon) [![CI](https://github.com/bmiddha/ts-rcon/actions/workflows/main.yml/badge.svg)](https://github.com/bmiddha/ts-rcon/actions/workflows/main.yml)
 
 ts-rcon is a simple library for connecting to RCON servers in node.js implemented in TypeScript.
 Based on [pushrax/node-rcon](https://github.com/pushrax/node-rcon).
