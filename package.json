@@ -4,7 +4,7 @@
   "description": "Rcon client implemented in Node.js with TypeScript",
   "license": "MIT",
   "author": "Bharat Middha <5100938+bmiddha@users.noreply.github.com>",
-  "homepage": "https://github.com/bmiddha/ts-rcon",
+  "homepage": "https://bmiddha.github.io/ts-rcon",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bmiddha/ts-rcon.git"
